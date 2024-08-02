@@ -1,0 +1,41 @@
+.container{
+    height: 90vh;
+    width: 90vw;
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+    border: 3px solid red;
+    background-color: black;
+}
+.ball{
+    height: 90px;
+    width: 90px;
+    background-color: white;
+    position: relative;
+    top: 80vh;
+    left: 8vw;
+    border-radius: 50px;
+    box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
+    animation: Move 3s linear infinite, Bounce 1s cubic-bezier(0.01,0.1,0.01,1.0) 0s infinite alternate-reverse none ;
+    /* animation: Move 3s linear infinite; */
+   
+}
+@keyframes Bounce {
+    from{
+        transform: translateY(0px );
+        bottom: 0;
+    }
+    to{
+        transform: translateY(-700px );
+        background-color: gold;
+    }
+}
+@keyframes Move {
+    from{
+        left:0;
+
+    }
+    to{
+        left: 100%;
+    }
+}
